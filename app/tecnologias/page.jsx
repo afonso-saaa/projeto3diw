@@ -1,7 +1,9 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import tecnologias from '@/app/data/tecnologias.json';
+
 
 const TecnologiasPage = () => {
   return (
@@ -17,6 +19,8 @@ const TecnologiasPage = () => {
               <Image
                 src={tecnologia.image}
                 alt={tecnologia.title}
+                width={100}  // Largura da imagem
+                height={100} // Altura da imagem
                 className="imagem-card"
               />
               <h2 className="text-lg font-semibold text-gray-800 mt-4">

@@ -17,7 +17,11 @@ const Header: React.FC = () => {
           <li>
             <Link href="/produtos">Produtos →</Link>
           </li>
+          <li>
+            <Link href="/carrinho">Carrinho →</Link>
+          </li>
         </ul>
+
       </nav>
     </header>
   )

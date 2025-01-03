@@ -14,7 +14,7 @@ const TecnologiasPage = () => {
               key={tecnologia.title}
               className="max-w-xs rounded-lg overflow-hidden shadow-md bg-gray-50 p-4"
             >
-              <img
+              <Image
                 src={tecnologia.image}
                 alt={tecnologia.title}
                 className="imagem-card"

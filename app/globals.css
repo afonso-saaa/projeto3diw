@@ -41,16 +41,28 @@ body {
 }
 
 main {
-  /* Reset e Box Model */
-  width: 90%;
-  height: 90%; /* Permite o ajuste automático da altura */
-  min-height: 250px; /* Define uma altura mínima */
-  padding: 20px;
+  /* Centralização */
   border-radius: 20px;
-  overflow-y: auto;
-
-  /* Fundo */
-  background: rgb(84, 218, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+main > div {
+  /* Estilização do quadrado branco */
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px; /* Ajustado para quadrado menor */
+  width: 90%;
+}
+
+h2 {
+  color: black;
+}
+
+
+
 
 

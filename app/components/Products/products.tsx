@@ -15,7 +15,7 @@ const Products: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Produtos</h1>
+      <h2 className="text-3xl font-bold text-center mb-6">Produtos</h2>
 
       {isLoading ? (
         <div className="text-center text-gray-600">Carregando produtos...</div>

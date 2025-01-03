@@ -21,7 +21,8 @@ const Card: React.FC<CardProps> = ({
   ratingCount,
 }) => {
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-md bg-white transition-transform transform hover:scale-105">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-md bg-white transition-transform transform hover:scale-105 relative">
+      {/* Imagem */}
       <Image
         src={imageUrl}
         alt={title}
@@ -32,7 +33,8 @@ const Card: React.FC<CardProps> = ({
         priority
       />
 
-      <div className="p-4">
+      {/* Conteúdo */}
+      <div className="p-4 pb-16">
         <h2 className="text-lg font-semibold text-gray-800 truncate">{title}</h2>
         <p className="text-sm text-gray-600 mt-2 line-clamp-3">{description}</p>
 
@@ -44,14 +46,16 @@ const Card: React.FC<CardProps> = ({
           <span className="font-medium">Avaliação:</span> {rating} ⭐ ({ratingCount} avaliações)
         </p>
 
-        <div className="mt-4 flex items-center justify-between">
-          <span className="text-lg font-bold text-gray-900">
-            R$ {price.toFixed(2)}
-          </span>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
-            Comprar
-          </button>
-        </div>
+        <span className="text-lg font-bold text-gray-900 block mt-4">
+          {price.toFixed(2)}€
+        </span>
+      </div>
+
+      {/* Botão no fundo */}
+      <div className="absolute bottom-0 left-0 w-full p-4">
+        <button className="w-full max-w-[80%] px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+          Comprar
+        </button>
       </div>
     </div>
   );

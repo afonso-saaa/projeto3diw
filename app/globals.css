@@ -24,7 +24,8 @@ body {
   /* Box Model */
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
+  width : 100%;
 
   /* Layout e Posicionamento */
   display: flex;
@@ -33,7 +34,7 @@ body {
   align-items: center;
 
   /* Fundo e Estética */
-  background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+  background: url('https://cdn.pixabay.com/photo/2020/02/29/22/21/new-york-4891246_1280.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -41,8 +42,9 @@ body {
 
 main {
   /* Reset e Box Model */
-  width: 320px;
-  height: 450px;
+  width: 90%;
+  height: 90%; /* Permite o ajuste automático da altura */
+  min-height: 250px; /* Define uma altura mínima */
   padding: 20px;
   border-radius: 20px;
   overflow-y: auto;
@@ -50,3 +52,5 @@ main {
   /* Fundo */
   background: rgb(84, 218, 255);
 }
+
+

@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Products from '../components/Products/products';
 
-export default function page() {
+const ProdutosPage = () => {
   return (
-    <div>produtos</div>
-  )
-}
+    <main className="w-full h-full">
+      <Products /> 
+    </main>
+  );
+};
+
+export default ProdutosPage;

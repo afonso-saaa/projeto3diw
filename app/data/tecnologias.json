@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "HTML",
+      "image": "/images/html-logo.png",
+      "description": "HTML é a linguagem de marcação base para a construção de páginas web.",
+      "rating": {
+        "rate": 4.5,
+        "count": 200
+      }
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "image": "/images/css-logo.png",
+      "description": "CSS é usado para estilizar páginas web e criar layouts modernos.",
+      "rating": {
+        "rate": 4.3,
+        "count": 180
+      }
+    },
+    {
+      "id": 3,
+      "title": "JavaScript",
+      "image": "/images/javascript-logo.png",
+      "description": "JavaScript é a linguagem de programação que adiciona interatividade às páginas web.",
+      "rating": {
+        "rate": 4.8,
+        "count": 250
+      }
+    },
+    {
+      "id": 4,
+      "title": "JSON",
+      "image": "/images/json-logo.png",
+      "description": "JSON é um formato leve de troca de dados, amplamente utilizado em APIs.",
+      "rating": {
+        "rate": 4.2,
+        "count": 150
+      }
+    },
+    {
+      "id": 5,
+      "title": "API RESTful",
+      "image": "/images/api-logo.png",
+      "description": "APIs RESTful permitem a comunicação entre aplicações de forma padronizada.",
+      "rating": {
+        "rate": 4.6,
+        "count": 210
+      }
+    },
+    {
+      "id": 6,
+      "title": "Swagger",
+      "image": "/images/swagger-logo.png",
+      "description": "Swagger é uma ferramenta para documentar APIs de forma interativa.",
+      "rating": {
+        "rate": 4.4,
+        "count": 190
+      }
+    },
+    {
+      "id": 7,
+      "title": "GitHub",
+      "image": "/images/github-logo.png",
+      "description": "GitHub é uma plataforma de hospedagem de código e colaboração.",
+      "rating": {
+        "rate": 4.9,
+        "count": 300
+      }
+    },
+    {
+      "id": 8,
+      "title": "Codespaces",
+      "image": "/images/codespaces-logo.png",
+      "description": "Codespaces é uma ferramenta para desenvolvimento remoto no GitHub.",
+      "rating": {
+        "rate": 4.3,
+        "count": 170
+      }
+    },
+    {
+      "id": 9,
+      "title": "GitHub Pages",
+      "image": "/images/github-pages-logo.png",
+      "description": "GitHub Pages permite hospedar sites diretamente de repositórios GitHub.",
+      "rating": {
+        "rate": 4.7,
+        "count": 230
+      }
+    },
+    {
+      "id": 10,
+      "title": "React.js",
+      "image": "/images/react-logo.png",
+      "description": "React.js é uma biblioteca para construção de interfaces de usuário.",
+      "rating": {
+        "rate": 4.9,
+        "count": 310
+      }
+    },
+    {
+      "id": 11,
+      "title": "Next.js",
+      "image": "/images/nextjs-logo.png",
+      "description": "Next.js é um framework React com funcionalidades avançadas.",
+      "rating": {
+        "rate": 4.8,
+        "count": 290
+      }
+    },
+    {
+      "id": 12,
+      "title": "Vercel",
+      "image": "/images/vercel-logo.png",
+      "description": "Vercel é uma plataforma de hospedagem otimizada para projetos Next.js.",
+      "rating": {
+        "rate": 4.7,
+        "count": 270
+      }
+    }
+  ]
+  

@@ -15,6 +15,9 @@ const Products = () => {
   // Estado para os produtos filtrados
   const [filteredData, setFilteredData] = useState<Product[]>([]);
 
+  // Estado para o carrinho
+  const [cart, setCart] = useState<Product[]>([]);
+
   // Busca dos produtos da API
   const { data, error, isLoading } = useSWR<Product[]>('/api/products', fetcher);
 
@@ -27,6 +30,16 @@ const Products = () => {
       setFilteredData(filtered);
     }
   }, [search, data]);
+
+  // Atualizar o localStorage quando o carrinho mudar
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+  // Função para adicionar ao carrinho
+  const addToCart = (product: Product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
 
   if (error) return <div className="text-red-600 text-center">Erro ao carregar os produtos.</div>;
 
@@ -41,7 +54,6 @@ const Products = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-4 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-
       </div>
 
       <h2 className="text-3xl font-bold text-center mb-8">Produtos</h2>
@@ -62,6 +74,7 @@ const Products = () => {
               imageUrl={product.image}
               rating={product.rating.rate}
               ratingCount={product.rating.count}
+              onBuy={() => addToCart(product)} // Passar a função para o botão "Comprar"
             />
           ))}
         </div>

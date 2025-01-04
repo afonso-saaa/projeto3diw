@@ -5,23 +5,17 @@ import useSWR from 'swr';
 import Card from '../Card/Card';
 import { Product } from '../../models/interfaces';
 
-// Hook para buscar dados da API
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Products = () => {
-  // Estado para o texto da pesquisa
   const [search, setSearch] = useState('');
 
-  // Estado para os produtos filtrados
   const [filteredData, setFilteredData] = useState<Product[]>([]);
 
-  // Estado para o carrinho
   const [cart, setCart] = useState<Product[]>([]);
 
-  // Busca dos produtos da API
   const { data, error, isLoading } = useSWR<Product[]>('/api/products', fetcher);
 
-  // Atualizar produtos filtrados quando `search` ou `data` mudar
   useEffect(() => {
     if (data) {
       const filtered = data.filter((product) =>
@@ -31,7 +25,6 @@ const Products = () => {
     }
   }, [search, data]);
 
-  // Atualizar o localStorage quando o carrinho mudar
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
@@ -45,7 +38,7 @@ const Products = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center p-6 bg-gray-100">
-      {/* Input de Pesquisa */}
+      
       <div className="mb-6 w-full max-w-lg">
         <input
           type="text"
@@ -58,7 +51,6 @@ const Products = () => {
 
       <h2 className="text-3xl font-bold text-center mb-8">Produtos</h2>
 
-      {/* Exibição dos Produtos */}
       {isLoading ? (
         <div className="text-center text-gray-600">Loading...</div>
       ) : (
@@ -74,7 +66,7 @@ const Products = () => {
               imageUrl={product.image}
               rating={product.rating.rate}
               ratingCount={product.rating.count}
-              onBuy={() => addToCart(product)} // Passar a função para o botão "Comprar"
+              onBuy={() => addToCart(product)} 
             />
           ))}
         </div>

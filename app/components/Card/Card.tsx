@@ -11,7 +11,7 @@ interface CardProps {
   imageUrl: string;
   rating: number;
   ratingCount: number;
-  onBuy: () => void; // Nova prop para lidar com a ação de compra
+  onBuy: () => void;
 }
 
 const Card: React.FC<CardProps> = ({
